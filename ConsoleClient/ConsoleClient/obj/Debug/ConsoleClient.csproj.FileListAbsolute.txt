@@ -1,0 +1,16 @@
+C:\Users\Bhargav\source\repos\ConsoleClient\ConsoleClient\bin\Debug\ConsoleClient.exe.config
+C:\Users\Bhargav\source\repos\ConsoleClient\ConsoleClient\bin\Debug\ConsoleClient.exe
+C:\Users\Bhargav\source\repos\ConsoleClient\ConsoleClient\bin\Debug\ConsoleClient.pdb
+C:\Users\Bhargav\source\repos\ConsoleClient\ConsoleClient\obj\Debug\ConsoleClient.csproj.AssemblyReference.cache
+C:\Users\Bhargav\source\repos\ConsoleClient\ConsoleClient\obj\Debug\ConsoleClient.csproj.CoreCompileInputs.cache
+C:\Users\Bhargav\source\repos\ConsoleClient\ConsoleClient\obj\Debug\ConsoleClient.exe
+C:\Users\Bhargav\source\repos\ConsoleClient\ConsoleClient\obj\Debug\ConsoleClient.pdb
+C:\Users\Bhargav\source\repos\ConsoleClient\ConsoleClient\obj\Debug\ConsoleClient.exe.config
+C:\Users\Bhargav\Networking Project\ConsoleClient\ConsoleClient\bin\Debug\ConsoleClient.exe.config
+C:\Users\Bhargav\Networking Project\ConsoleClient\ConsoleClient\bin\Debug\ConsoleClient.exe
+C:\Users\Bhargav\Networking Project\ConsoleClient\ConsoleClient\bin\Debug\ConsoleClient.pdb
+C:\Users\Bhargav\Networking Project\ConsoleClient\ConsoleClient\obj\Debug\ConsoleClient.csproj.AssemblyReference.cache
+C:\Users\Bhargav\Networking Project\ConsoleClient\ConsoleClient\obj\Debug\ConsoleClient.exe.config
+C:\Users\Bhargav\Networking Project\ConsoleClient\ConsoleClient\obj\Debug\ConsoleClient.csproj.CoreCompileInputs.cache
+C:\Users\Bhargav\Networking Project\ConsoleClient\ConsoleClient\obj\Debug\ConsoleClient.exe
+C:\Users\Bhargav\Networking Project\ConsoleClient\ConsoleClient\obj\Debug\ConsoleClient.pdb
