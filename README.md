@@ -1,106 +1,114 @@
-# 💱 Currency Exchange System
+# 💱 Currency Exchange App (WCF + MAUI)
 
-A complete backend and console-based currency exchange application built using **WCF (Windows Communication Foundation)** and **Entity Framework** on the .NET Framework. The system integrates with the official **National Bank of Poland (NBP) API** for real-time exchange rates.
-
----
-
-## ✅ Features
-
-### 🛠️ Backend (WCF Service)
-- Real-time exchange rates using [NBP API](http://api.nbp.pl/en.html)
-- Buy/Sell currency with accurate conversion
-- View current PLN balance
-- View wallet holdings (multiple currencies)
-- Record all transactions in a SQL database
-
-### 💾 Database Integration (EF 6)
-- Code-first Entity Framework
-- Tracks users, wallets (currency holdings), and transactions
-- Migrations used to auto-generate schema
-
-### 🖥️ Console Client (Frontend)
-- Connects to the WCF backend
-- Allows:
-  - Getting exchange rates
-  - Buying and selling currencies
-  - Viewing PLN balance
-  - Viewing currency holdings
+This is a full-stack Currency Exchange System built using a **WCF backend**, **SQL Server database**, and a **.NET MAUI frontend**. The app allows users to top up their PLN balance, buy/sell currencies based on live exchange rates, and track transaction history.
 
 ---
 
-## 🧪 Tech Stack
+## 📦 Features
 
-- .NET Framework (WCF)
-- Entity Framework 6 (Code-First)
-- SQL Server LocalDB
-- Visual Studio 2022
-- C#
+- ✅ **Top Up** your PLN balance
+- ✅ **Buy/Sell** currency based on live NBP exchange rates
+- ✅ View **current PLN balance**
+- ✅ See live **wallet holdings** (USD, INR, etc.)
+- ✅ Browse **transaction history**
+- ✅ Responsive and user-friendly **MAUI mobile interface**
+- ✅ Fully integrated with **WCF backend + EF database**
 
 ---
 
-## 🚀 Getting Started
+## 🧰 Technologies Used
 
-### 1. Clone the Repository
+| Layer       | Stack                      |
+|-------------|----------------------------|
+| Frontend    | .NET MAUI (XAML + C#)      |
+| Backend     | WCF (WebHttpBinding, REST) |
+| Database    | SQL Server (LocalDB) + EF  |
+| Integration | HttpClient + JSON          |
 
-```bash
-git clone https://github.com/VamsiPrasad01/CurrencyExchange.git
+---
+
+## 🧪 How to Run the Project
+
+### 🚀 Backend (WCF)
+
+1. Open the solution in Visual Studio
+2. Right-click the **solution → Set Startup Projects → Multiple startup projects**
+3. Set:
+   - `CurrencyExchangeBackend` → Start
+   - `CurrencyExchangeFrontend` → Start
+4. Run the solution (F5) — backend will open `Service1.svc`
+
+### 📱 Frontend (MAUI)
+
+- The MAUI app launches a mobile-style UI
+- Navigate between:
+  - 💰 Home (Balance + Top-Up)
+  - 🔁 Exchange Page (Buy/Sell)
+  - 📜 Transaction History
+
+---
+
+## 🔗 WCF Endpoints
+
+| Operation            | Method | URL Example |
+|----------------------|--------|-------------|
+| Get PLN Balance      | GET    | `/GetPLNBalance` |
+| Get Wallet Holdings  | GET    | `/GetCurrencyHoldings` |
+| Top-Up Balance       | POST   | `/TopUpBalance?amount=500` |
+| Buy Currency         | POST   | `/BuyCurrency?currencyCode=usd&plnAmount=100` |
+| Sell Currency        | POST   | `/SellCurrency?currencyCode=usd&currencyAmount=2` |
+| Transaction History  | GET    | `/GetTransactions` |
+
+---
+
+## 📸 Screenshots
+
+| Screen               | Description                         |
+|----------------------|-------------------------------------|
+| 💰 Home              | Shows balance + top-up form         |
+| 🔄 Exchange          | Currency picker, buy/sell buttons   |
+| 📜 History           | List of all past transactions       |
+
+> _Screenshots will be added before final submission._
+
+---
+
+## 📌 Developer Notes
+
+- Uses `EnsureUserExists()` to simulate a logged-in default user
+- Exchange rates are pulled from [NBP API](https://api.nbp.pl)
+- Transactions and wallet holdings are persisted in SQL Server
+
+---
+
+## 🪪 License
+
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
+
 ```
 
-### 2. Open the Solution
+MIT License
 
-Open `CurrencyExchange.sln` in **Visual Studio**.
+Copyright (c) 2025
 
-### 3. Run Migrations
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-Open **Package Manager Console** and run:
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
 
-```powershell
-Update-Database
-```
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
 
-This will create your database (LocalDB) with required tables.
-
-### 4. Run the Solution
-
-- Set both projects (`CurrencyExchangeBackend` and `ConsoleClient`) as startup
-- Press `F5` to launch the WCF service and run the client
-
----
-
-## 🧩 Architecture
-
-```
-ConsoleClient
-   ↓
-WCF Service (CurrencyExchangeBackend)
-   ↓
-EF Core → SQL Server (LocalDB)
-   ↓
-NBP API (for exchange rates)
 ```
 
 ---
 
-## 📌 NBP API Sample
+## 👤 Author
 
-Example endpoint used:
+- **Attada Vamsi Prasad*
+- Project for **Networking Application Development**
 ```
-https://api.nbp.pl/api/exchangerates/rates/a/usd?format=json
-```
-
----
-
-## 🎓 Academic Use
-
-This project was built as part of a course lab to fulfill the following grading criteria:
-
-- ✅ WCF Service (Grade 3)
-- ✅ Database Integration (Grade +1)
-- ⏳ Optional: Mobile App UI (for full 5/5 score)
-
----
-
-## 📃 License
-
-MIT License  
-© 2025 Vamsi Prasad
