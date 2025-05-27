@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "CurrencyExchangeFrontend\\CurrencyExchangeFrontend.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "..\\CurrencyExchangeBackend\\CurrencyExchangeBackend\\CurrencyExchangeBackend.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]
